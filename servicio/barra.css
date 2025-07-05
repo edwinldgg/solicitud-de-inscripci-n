@@ -1,0 +1,23 @@
+#titulo{
+ padding: 15px 20px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+align-content: center;
+width: 100%px;
+background-color: rgb(104, 24, 24);
+  }
+
+  h3{
+
+    color:white;
+  }
+
+  h2{
+    color:white;
+  
+  }
+  

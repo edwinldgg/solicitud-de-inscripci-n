@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Alumno</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="registro.css"/>
+<link rel="stylesheet" type="text/css" href="barra.css"/>
+</head>
+<body>
+
+
+  <div id="titulo">
+  <h2>SUBSISTEMA EDUCATIVO ESTATAL</h2>
+  <h3>GRAL. NICOLÁS ROMERO - CCT: 15EPR4986M</h3>
+  <h3>SOLICITUD DE INSCRIPCIÓN Y REINSCRIPCIÓN</h3>
+  </div>
+
+  <form id="registroForm" method="POST" action="guardar.php">
+    <!-- Datos personales -->
+    <div class="section-title">Datos del Alumno</div>
+
+    <label>Primer Apellido:</label>
+    <input type="text" name="primer_apellido" required>
+
+    <label>Segundo Apellido:</label>
+    <input type="text" name="segundo_apellido" required>
+
+    <label>Nombre(s):</label>
+    <input type="text" name="nombres" required>
+
+    <label>Fecha de nacimiento:</label>
+    <input type="date" name="fecha_nacimiento" required>
+
+    <label>Sexo:</label>
+    <select name="sexo" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">Hombre</option>
+      <option value="MUJER">Mujer</option>
+    </select>
+
+    <label>Nivel:</label>
+    <input type="text" name="nivel" value="PRIMARIA" required>
+
+    <label>CURP (18 caracteres):</label>
+    <input type="text" name="curp" maxlength="18" minlength="18" required pattern=".{18,18}" title="El CURP debe tener exactamente 18 caracteres.">
+ 
+    <label>Edad: (años)</label>
+    <input type="text" name="edad" required>
+   
+    <label>Peso: (kg)</label>
+    <input type="text" name="peso" required>
+
+    <label>Estatura: (cm)</label>
+    <input type="text" name="estatura" required>
+       
+    <label>Lentes:</label>
+    <select name="Lentes" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Zapato ortopédico</label>
+    <select name="Zapato_ortopedico" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Tipo de sangre</label>
+    <select name="tipo_de_sangre" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">A positivo (A +)</option>
+      <option value="HOMBRE">A negativo (A -)</option>
+      <option value="HOMBRE">B positivo (B +)</option>
+      <option value="HOMBRE">B negativo (B -)</option>
+      <option value="HOMBRE">AB positivo (AB +)</option>
+      <option value="HOMBRE">AB negativo (AB +)</option>
+      <option value="HOMBRE">O positivo (O +)</option>
+      <option value="HOMBRE">O negativo (O -)</option>
+    </select>
+
+    <label>Cartilla de vacunación:</label>
+    <select name="cartilla_de_vacunacion" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Vacunas completas:</label>
+    <select name="vacunas_completas" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Enfermedades crócinas:</label>
+    <input type="text" name="enfermedades_cronicas" required>
+      
+    <label>Alergias:</label>
+    <input type="text" name="alergias" required>
+
+    <label>¿Pertenece a un grupo indígena?</label>
+    <input type="text" name="grupo_indigena" required>
+
+    <label>¿Habla alguna lengua indígena?</label>
+    <input type="text" name="lengua_indigena" required>
+
+    <label>Nacionalidad</label>
+    <input type="text" name="nacionalidad" required>
+
+   <label>Entidad Federativa de Nacimiento:</label>
+    <input type="text" name="entidad_nacimiento" required>
+
+    <label>Tipo de documentación oficial:</label>
+    <input type="text" name="tipo_de_documentacion_oficial" value="CONSTANCIA DE LA CURP" required>
+        
+    <!-- Domicilio -->
+    <div class="section-title">Domicilio del Alumno</div>
+
+    <label>Calle:</label>
+    <input type="text" name="calle" required>
+
+    <label>Entre calles:</label>
+    <input type="text" name="entre_calle1" required>
+    <input type="text" name="entre_calle2" required>
+
+    <label>Número Exterior:</label>
+    <input type="text" name="numero_ext" required>
+
+    <label>Número Interior:</label>
+    <input type="text" name="numero_int" required>
+
+    <label>Código Postal:</label>
+    <input type="text" name="codigo_postal" required>
+
+    <label>Entidad Federativa:</label>
+    <input type="text" name="entidad_federativa" required>
+
+    <label>Delegación o Municipio:</label>
+    <input type="text" name="municipio" required>
+
+    <label>Colonia:</label>
+    <input type="text" name="colonia" required>
+
+    <label>Localidad:</label>
+    <input type="text" name="localidad" required>
+
+    <label>Referencia:</label>
+    <input type="text" name="referencia" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono" required pattern="[0-9]{10}" title="Debe contener 10 dígitos sin espacios.">
+
+
+    <!-- Datos del Tutor -->
+<div class="section-title">Datos del Tutor</div>
+
+<label>Nombre completo del tutor:</label>
+<input type="text" name="nombre_tutor" required>
+
+<label>CURP del tutor (18 caracteres):</label>
+<input type="text" name="curp_tutor" maxlength="18" minlength="18" required pattern=".{18,18}" title="El CURP debe tener exactamente 18 caracteres.">
+
+<label>Parentesco con el alumno:</label>
+<input type="text" name="parentesco" required>
+
+<label>Escolaridad del tutor:</label>
+<input type="text" name="escolaridad_tutor" required>
+
+<label>Ocupación del tutor:</label>
+<input type="text" name="ocupacion_tutor" required>
+
+<label>Fecha de nacimiento del tutor:</label>
+<input type="date" name="fecha_nacimiento_del_tutor" required>
+
+<label>Estado civil:</label>
+<input type="text" name="estado_civil" required>
+
+<label>Nacionalidad del tutor</label>
+<input type="text" name="nacionalidad_del_tutor" required>
+
+<label>Entidad Federativa de Nacimiento del tutor:</label>
+<input type="text" name="entidad_nacimiento_del_tutor" required>
+
+<label>Tipo de documentación oficial:</label>
+<input type="text" name="tipo_de_documentacion_oficial_del tutor" value="ACTA DE NACIMIENTO" required>
+
+<!-- Domicilio del tutor-->
+    <div class="section-title">Domicilio del tutor</div>
+
+    <label>Calle:</label>
+    <input type="text" name="calle_del_tutor" required>
+
+    <label>Entre calles:</label>
+    <input type="text" name="entre_calle1_del_tutor" required>
+    <input type="text" name="entre_calle2_del_tutor" required>
+
+    <label>Número Exterior:</label>
+    <input type="text" name="numero_ext_del_tutor" required>
+
+    <label>Número Interior:</label>
+    <input type="text" name="numero_int_del_tutor" required>
+
+    <label>Código Postal:</label>
+    <input type="text" name="codigo_postal_del_tutor" required>
+
+    <label>Entidad Federativa:</label>
+    <input type="text" name="entidad_federativa_del_tutor" required>
+
+    <label>Delegación o Municipio:</label>
+    <input type="text" name="municipio_del_tutor" required>
+
+    <label>Colonia:</label>
+    <input type="text" name="colonia_del_tutor" required>
+
+    <label>Localidad:</label>
+    <input type="text" name="localidad_del_tutor" required>
+
+    <label>Referencia:</label>
+    <input type="text" name="referencia_del_tutor" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="telefono_del_tutor" required pattern="[0-9]{10}" title="Debe contener 10 dígitos sin espacios.">
+
+    <label>Correo electronico del tutor:</label>
+    <input type="text" name="correo_electronico_del_tutor" required>
+
+<!-- Datos de Contacto -->
+<div class="section-title">Datos de Contacto</div>
+
+<label>Teléfono celular del tutor:</label>
+<input type="tel" name="telefono_celular" required pattern="[0-9]{10}" title="Debe contener 10 dígitos sin espacios.">
+
+<label>Teléfono fijo (si aplica):</label>
+<input type="tel" name="telefono_fijo" pattern="[0-9]{10}" title="Debe contener 10 dígitos sin espacios.">
+
+<label>Correo electrónico:</label>
+<input type="email" name="correo_electronico" required>
+
+<label>Nombre de contacto de emergencia:</label>
+<input type="text" name="contacto_emergencia" required>
+
+<label>Teléfono del contacto de emergencia:</label>
+<input type="tel" name="telefono_emergencia" required pattern="[0-9]{10}" title="Debe contener 10 dígitos sin espacios.">
+
+<!--Herramientas de aprendizaje-->
+<div class="section-title">¿El estudiante cuenta con los siguientes apoyos para su aprendizaje?</div>
+
+ <label>Computadora de escritorio o portatil:</label>
+    <select name="computadora" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+  <label>Tablet:</label>
+    <select name="tablet" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Intrernet en casa:</label>
+    <select name="internet_en_casa" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Internte en celular:</label>
+    <select name="internte_en_celular" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Televisión de paga:</label>
+    <select name="television_de_paga" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <label>Televisión abierta:</label>
+    <select name="television_abierta" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+  <label>Radio:</label>
+    <select name="radio" required>
+      <option value="">Seleccione</option>
+      <option value="HOMBRE">NO</option>
+      <option value="MUJER">SI</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registroForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const curp = form.curp.value.trim();
+      if (curp.length !== 18) {
+        alert('El CURP debe tener exactamente 18 caracteres.');
+        return;
+      }
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+          const res = await fetch('http://localhost:3000/api/registro', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          alert('¡Registro enviado correctamente!');
+          form.reset();
+        } else {
+          alert('Error al enviar. Intenta más tarde.');
+        }
+      } catch (err) {
+        alert('Error de red.');
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

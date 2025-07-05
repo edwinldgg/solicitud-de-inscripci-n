@@ -1,0 +1,47 @@
+  
+    body {
+      font-family: Arial, sans-serif;
+      width: 95%;
+      margin: auto;
+      padding: 20px;
+      
+    }
+
+    h2 {
+      text-align: center;
+      color: hsl(0, 0%, 100%);
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      background-color: rgb(104, 24, 24);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d99;
+    }
+
+    .section-title {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #444;
+    }
+  
